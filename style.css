@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #ff6b6b;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.mbti-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.mbti-box {
+    flex: 1;
+    text-align: center;
+}
+
+.mbti-label {
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+h3 {
+    color: #444;
+    font-weight: 500;
+}
+
+.mbti-select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1em;
+    color: #333;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mbti-select:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+.heart-divider {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.check-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa502);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.check-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .mbti-container {
+        flex-direction: column;
+    }
+
+    .heart-divider {
+        margin: 20px 0;
+    }
+
+    .card {
+        padding: 30px;
+    }
+}
